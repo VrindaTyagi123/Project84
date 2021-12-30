@@ -30,11 +30,35 @@ function my_keydown(e)
 	console.log(keyPressed);
 	
 		if((keyPressed >=97 && keyPressed<=122)|| (keyPressed >=65 && keyPressed<=90))
-		//write a code to check the type of key pressed
 
+		if((keyPressed >=48 && keyPressed<=57))
+
+		if((keyPressed >=37 && keyPressed<=407))
+
+		if((keyPressed >=17 && keyPressed<=18)|| (keyPressed >=27))
+
+		if((keyPressed >=17 && keyPressed<=18)|| (keyPressed >=27))
+		
+		if((keyPressed >=17 && keyPressed<=18)|| (keyPressed >=27))
+		
 	{
 		otherkey();
 		document.getElementById("d1").innerHTML="You pressed symbol or other key";
+	}
+	else
+	{
+		aplhabetkey();
+		document.getElementById("d1").innerHTML="You pressed alphabet key";
+	}
+	else
+	{
+		numberkey();
+		document.getElementById("d1").innerHTML="You pressed number key";
+	}
+	
+	{
+		arrowkey();
+		document.getElementById("d1").innerHTML="You pressed number key";
 	}
 }
 
