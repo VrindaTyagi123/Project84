@@ -23,6 +23,7 @@ function uploadimg() {
 }
 
 //Write a code to grab the key-pressed event
+window.addEventListener("keydown", my_keydown);
 
 function my_keydown(e)
 {
@@ -30,36 +31,37 @@ function my_keydown(e)
 	console.log(keyPressed);
 	
 		if((keyPressed >=97 && keyPressed<=122)|| (keyPressed >=65 && keyPressed<=90))
+		{
+			aplhabetkey();
+		document.getElementById("d1").innerHTML="You pressed alphabet key";
+		console.log("alphabetkey");
+		}
 
-		if((keyPressed >=48 && keyPressed<=57))
+		else if((keyPressed >=48 && keyPressed<=57))
+		{
+			numberkey();
+			document.getElementById("d1").innerHTML="You pressed number key";
+			console.log("numberkey");
+		}
 
-		if((keyPressed >=37 && keyPressed<=407))
+		else if((keyPressed >=37 && keyPressed<=407))
+		{
+			arrowkey();
+			document.getElementById("d1").innerHTML="You pressed number key";
+			console.log("arrowkey");
+		}
 
-		if((keyPressed >=17 && keyPressed<=18)|| (keyPressed >=27))
+		else if ((keyPressed >=17 && keyPressed<=18)|| (keyPressed >=27))
+		{
+			specialkey();
+			document.getElementById("d1").innerHTML="You pressed special key";
+		}
 
-		if((keyPressed >=17 && keyPressed<=18)|| (keyPressed >=27))
-		
-		if((keyPressed >=17 && keyPressed<=18)|| (keyPressed >=27))
-		
-	{
+		else{
 		otherkey();
 		document.getElementById("d1").innerHTML="You pressed symbol or other key";
 	}
-	else
-	{
-		aplhabetkey();
-		document.getElementById("d1").innerHTML="You pressed alphabet key";
-	}
-	else
-	{
-		numberkey();
-		document.getElementById("d1").innerHTML="You pressed number key";
-	}
-	
-	{
-		arrowkey();
-		document.getElementById("d1").innerHTML="You pressed number key";
-	}
+
 }
 
 function aplhabetkey()
@@ -73,19 +75,21 @@ function numberkey()
 	img_image="numkey.png";
 	add();
 }
+
 function arrowkey()
 {
 	img_image="Arrkey.png";
 	add();
 }
+
 function specialkey()
 {
 	img_image="spkey.png";
 	add();
 }
+
 function otherkey()
 {
 	img_image="otherkey.png";
 	add();
 }
-	
